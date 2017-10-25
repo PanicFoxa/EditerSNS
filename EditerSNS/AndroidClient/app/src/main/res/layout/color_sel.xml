@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:id="@+id/canvasmain"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:orientation="vertical" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.04"/>
+    <com.example.bit_user.a5_29_restart.Colorcanvas
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.16"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/lastcolor"
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="0.1"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="left|center"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Rcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R:"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/Gcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="G:"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/Bcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B:"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <Button
+            android:onClick="selcol"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="확인" />
+
+        <Button
+            android:onClick="back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="취소" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!-- 줄임말 -->
+	<typeAliases>
+		<typeAlias type="com.example.mbtest.model.dto.MemberVO" alias="MemberVO"/>
+		<typeAlias type="com.example.mbtest.model.dto.MemberSketchVO" alias="MemberSketchVO"/>
+		<typeAlias type="com.example.mbtest.model.dto.BoardVO" alias="BoardVO"/>
+		<typeAlias type="com.example.mbtest.model.dto.BoardSketchVO" alias="BoardSketchVO"/>
+	</typeAliases>
+	
+
+	
+
+	<!-- 사용할 mapper 등록 -->
+	<mappers>
+		<mapper resource="Mappers/memberMapper.xml"/>
+		<mapper resource="Mappers/membersketchMapper.xml"/>
+		<mapper resource="Mappers/boardMapper.xml"/>
+	</mappers>
+	
+</configuration>

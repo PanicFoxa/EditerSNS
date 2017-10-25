@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+    <FrameLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/main_image"
+            android:scaleType="fitXY"
+            android:background="@drawable/map"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffffff"
+            android:gravity="center"
+            android:id="@+id/main_text"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom|right"
+            >
+            <Button
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:background="@drawable/harr"
+                android:id="@+id/bu1"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="30"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"/>
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="18dp"
+                android:background="@drawable/eotrmf"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:text="290"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="3dp"/>
+
+        </LinearLayout>
+
+
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

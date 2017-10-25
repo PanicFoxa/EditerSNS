@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="member">
+   	<select id="memberlist" resultType="MemberVO">
+   		SELECT * FROM USER_INFO
+   	</select>
+   	<insert id="memberInsert">
+	   	INSERT INTO USER_INFO
+	   	VALUES (user_info_sequence.nextval, #{user_id},null)
+   </insert>
+   <select id ="muserselect" resultType="MemberVO">
+   		SELECT * FROM USER_INFO WHERE user_id = #{user_id}
+   </select>
+</mapper>

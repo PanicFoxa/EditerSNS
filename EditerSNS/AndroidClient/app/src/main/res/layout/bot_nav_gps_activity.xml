@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_Drawer_Layout"
+    tools:context="com.example.bit_user.a5_29_restart.MainActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/tool_bar">
+            </include>
+        </android.support.design.widget.AppBarLayout>
+
+        <!-- 메인 프레임 레이아웃 -->
+        <FrameLayout
+            android:id="@+id/main_Frame_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="바텀 GPS 액티비티"
+                android:textSize="30dp"/>
+        </FrameLayout>
+
+        <!-- 바텀 네비게이션 위치 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom">
+
+            <android.support.design.widget.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/bottom_navigation_bar"
+                app:menu="@menu/bottom_navigation_bar_item">
+
+
+            </android.support.design.widget.BottomNavigationView>
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- 네비게이션 바 -->
+    <android.support.design.widget.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:id="@+id/navigation_bar"
+        app:menu="@menu/navigation_bar_item"
+        app:headerLayout="@layout/navigation_bar">
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 다른 mapper와 중복되지 않도록 네임스페이스 기재 -->
+<mapper namespace="board">
+	<select id="boardrownum" parameterType="int" resultType="java.lang.Integer">
+	SELECT * FROM 
+ 		(SELECT READ_NUM FROM READ_TB ORDER BY READ_NUM DESC) 
+	WHERE ROWNUM = 1
+	</select>
+   	<insert id="boardinsert">
+	   	INSERT INTO READ_TB
+	   	VALUES (board_sequence.nextval, #{write_user},#{read_lat},#{read_lont},null,#{share_whether})
+   </insert>
+   <insert id="boardbginsert">
+	   	INSERT INTO READBG_TB
+	   	VALUES (#{read_num},#{bg_img})
+   </insert>
+   <insert id="boardtxtinsert">
+	   	INSERT INTO READTEXT_TB
+	   	VALUES (#{read_num},#{txt_content},#{txt_color},#{txt_font},#{txt_weight},#{txt_size},#{txt_orit},#{txt_location},#{txt_sort})
+   </insert>
+   <insert id="boardskeinsert">
+	   	INSERT INTO READSKETCH_TB
+	   	VALUES (#{rsread_num},#{rs_img},#{rs_x},#{rs_y},#{rs_w},#{rs_h})
+   </insert>
+   
+   
+   <select id="boardselect" resultType="BoardVO">
+		select read_tb.*,readbg_tb.*,readtext_tb.* from 
+		read_tb inner join 
+		readbg_tb on read_tb.read_num = readbg_tb.bgread_num left outer join
+		readtext_tb on read_tb.read_num = readtext_tb.txtread_num
+		order by read_tb.read_num
+	</select> 
+	<select id="boardskselect" resultType="BoardSketchVO">
+		select * from readsketch_tb order by rsread_num
+	</select>
+	
+</mapper>

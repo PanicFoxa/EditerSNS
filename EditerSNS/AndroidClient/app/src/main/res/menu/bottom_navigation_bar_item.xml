@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/bottom_navi_search"
+        android:title="읽기"
+        android:icon="@drawable/letter"
+        android:checked="true"
+
+        >
+    </item>
+
+    <item
+        android:id="@+id/bottom_navi_write"
+        android:title="글쓰기"
+        android:icon="@drawable/edit"
+        android:checked="true"
+        >
+    </item>
+
+    <item
+        android:id="@+id/bottom_navi_notice"
+        android:title="알림"
+        android:icon="@drawable/bell"
+        android:checked="true"
+        >
+    </item>
+
+    <item
+        android:id="@+id/bottom_navi_five"
+        android:title="GPS"
+        android:icon="@drawable/user"
+        android:checked="true"
+        >
+    </item>
+
+</menu>
